@@ -1,1 +1,14 @@
-#null
+version: "3.4"
+services:
+  web: 
+    image: andem/tcmg412-api
+    ports:
+      - "5000:5000"
+    networks:
+      - webnet
+  redis: 
+    image: redis
+    networks:
+      - webnet
+networks:
+  webnet:
